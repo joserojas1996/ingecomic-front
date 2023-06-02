@@ -63,8 +63,8 @@
                   </span>
                 </div>
                 <div class="flex-grow-1 ms-2">
-                  <div class="fs-5 fw-bold mb-0">Dreyka</div>
-                  <span class="d-block fs-6">Tengo Hambre!</span>
+                  <div class="fs-5 fw-bold mb-0">Ana Marin</div>
+                  <span class="d-block fs-6">Necesito hacer rendir mi dinero!</span>
                 </div>
               </div>
             </div>
@@ -87,10 +87,10 @@
                 </div>
                 <div class="flex-grow-1 ms-2">
                   <div class="fs-5 fw-bold text-dark mb-0">
-                    Amiga que no hace nada
+                    Sebastian Krauss
                   </div>
                   <span class="d-block fs-6 text-dark"
-                    >Nos quedo bastante bien 🔥👋</span
+                    >Mi dinero no rinde 🔥👋</span
                   >
                 </div>
               </div>
