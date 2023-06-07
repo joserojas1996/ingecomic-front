@@ -1,6 +1,4 @@
 <template>
-  <MainLayout>
-    <!-- Hero -->
     <div class="container content-space-t-4 content-space-b-2 mt-5">
       <div class="row justify-content-lg-between align-items-lg-center">
         <div class="col-lg-6 mb-5 mb-lg-0">
@@ -21,8 +19,8 @@
           </div>
 
           <div class="d-grid d-sm-flex gap-3 mb-5">
-            <a class="btn btn-primary btn-pointer" href="#"
-              >Quiero aprender mas</a
+            <router-link class="btn btn-primary btn-pointer" to="/login"
+              >Quiero aprender mas</router-link
             >
           </div>
         </div>
@@ -64,7 +62,7 @@
                 </div>
                 <div class="flex-grow-1 ms-2">
                   <div class="fs-5 fw-bold mb-0">Ana Marin</div>
-                  <span class="d-block fs-6">Necesito hacer rendir mi dinero!</span>
+                  <span class="d-block fs-6">Necesito dinero!</span>
                 </div>
               </div>
             </div>
@@ -402,5 +400,4 @@
       <!-- End Row -->
     </div>
     <!-- End Card Grid -->
-  </MainLayout>
 </template>

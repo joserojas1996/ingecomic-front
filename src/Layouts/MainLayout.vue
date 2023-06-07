@@ -52,7 +52,9 @@
                   >
                 </li>
                 <li class="hs-has-mega-menu nav-item">
-                  <router-link class="hs-mega-menu-invoker nav-link" to="/about"
+                  <router-link
+                    class="hs-mega-menu-invoker nav-link"
+                    to="/resources"
                     >Recursos</router-link
                   >
                 </li>
@@ -80,10 +82,10 @@
 
                 <!-- Sign up -->
                 <li class="nav-item">
-                  <a
+                  <router-link
                     class="btn btn-dark d-none d-lg-inline-block btn-pointer"
-                    to="/about"
-                    >Comenzar</a
+                    to="/login"
+                    >Comenzar</router-link
                   >
                 </li>
                 <!-- End Sign up -->
@@ -97,7 +99,7 @@
 
     <!-- ========== END HEADER ========== -->
     <main id="content" role="main">
-     <router-view/>
+      <router-view />
     </main>
 
     <!-- ========== FOOTER ========== -->
@@ -109,18 +111,18 @@
             <ul class="list-inline list-px-2 mb-0">
               <li class="list-inline-item">
                 <a class="link link-light link-light-75" href="#"
-                  >Privacy and Policy</a
+                  >Dreyka santana</a
                 >
               </li>
               <li class="list-inline-item">
-                <a class="link link-light link-light-75" href="#">Terms</a>
+                <a class="link link-light link-light-75" href="#"
+                  >Yesica Dimas</a
+                >
               </li>
-              <li class="list-inline-item">
-                <a class="link link-light link-light-75" href="#">Status</a>
-              </li>
+
               <li class="list-inline-item">
                 <!-- Button Group -->
-                <div class="btn-group">
+                <!-- <div class="btn-group">
                   <a
                     class="link link-light link-light-75"
                     href="javascript:;"
@@ -171,7 +173,7 @@
                       <span>Español</span>
                     </a>
                   </div>
-                </div>
+                </div> -->
                 <!-- End Button Group -->
               </li>
             </ul>
@@ -180,7 +182,7 @@
           <!-- End Col -->
 
           <div class="col-md-auto">
-            <p class="fs-5 text-white-70 mb-0">© Unify. 2021</p>
+            <p class="fs-5 text-white-70 mb-0">© UNERG. 2023</p>
           </div>
           <!-- End Col -->
         </div>
