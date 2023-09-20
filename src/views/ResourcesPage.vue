@@ -120,7 +120,7 @@
                   necesarios para implementar con éxito un proyecto de
                   tecnología.
                 </p>
-                <span class="card-link">Leer mas</span>
+                <router-link to="resources-content" class="card-link">Leer mas</router-link>
               </div>
               <!-- End Col -->
             </div>
@@ -150,7 +150,7 @@
                   incluyendo la estimación de costos de desarrollo, costos
                   operativos y el cálculo de los flujos de efectivo esperados.
                 </p>
-                <span class="card-link">Comenzar</span>
+                <router-link to="resources-content" class="card-link">Comenzar</router-link>
               </div>
               <!-- End Col -->
             </div>
@@ -180,7 +180,7 @@
                   asociados con la implementación del proyecto para minimizar el impacto de dichos riesgos en el
                   éxito del proyecto.
                 </p>
-                <span class="card-link">Comenzar</span>
+                <router-link to="resources-content" class="card-link">Comenzar</router-link>
               </div>
               <!-- End Col -->
             </div>
@@ -209,7 +209,7 @@
                   Evaluación de los impactos positivos y beneficios potenciales
                   derivados del proyecto tecnológico.
                 </p>
-                <span class="card-link">Read more</span>
+                <router-link to="resources-content" class="card-link">Read more</router-link>
               </div>
               <!-- End Col -->
             </div>
@@ -239,7 +239,7 @@
                   la organización, evaluando cómo el proyecto contribuirá a los
                   objetivos estratégicos de la organizacion.
                 </p>
-                <span class="card-link">Comenzar</span>
+                <router-link to="resources-content" class="card-link">Comenzar</router-link>
               </div>
               <!-- End Col -->
             </div>
@@ -268,7 +268,7 @@
                   How to use job levels, competencies, and growth plans to make
                   career advancement crystal clear.
                 </p>
-                <span class="card-link">Read more</span>
+                <router-link to="resources-content" class="card-link">Read more</router-link>
               </div>
               <!-- End Col -->
             </div>
@@ -297,7 +297,7 @@
                   A how-to guide for running and acting on your next employee
                   engagement survey.
                 </p>
-                <span class="card-link">Read more</span>
+                <router-link to="resources-content" class="card-link">Read more</router-link>
               </div>
               <!-- End Col -->
             </div>
@@ -325,7 +325,7 @@
                 <p class="card-text">
                   The story of how we ended up with performance reviews
                 </p>
-                <span class="card-link">Read more</span>
+                <router-link to="resources-content" class="card-link">Read more</router-link>
               </div>
               <!-- End Col -->
             </div>

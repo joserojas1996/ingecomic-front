@@ -7,8 +7,7 @@
     >
       <div class="container">
         <a class="navbar-brand mx-auto" href="index.html" aria-label="Unify">
-         
-         <h1>InGeComic</h1>
+          <h1>InGeComic</h1>
         </a>
       </div>
     </header>
@@ -17,13 +16,13 @@
     <!-- ========== MAIN CONTENT ========== -->
     <main id="content" role="main">
       <!-- Content -->
-      <div class="container text-center">
+      <div class="container text-center" style="margin-top: 18rem">
         <div class="mb-4">
           <h1 class="display-1">404</h1>
-          <h3 class="mb-1">Something went wrong</h3>
-          <p>The page you are looking for does not exist!</p>
+          <h2 class="mb-1">Algo salió mal</h2>
+          <p>¡La página que buscas no existe!</p>
         </div>
-        <a class="btn btn-primary" href="index.html">Go back home</a>
+        <router-link class="btn btn-primary" to="/"> Ir al inicio </router-link>
       </div>
       <!-- End Content -->
     </main>
@@ -34,45 +33,14 @@
       <footer class="container py-4">
         <div class="row align-items-md-center text-center text-md-start">
           <div class="col-md mb-3 mb-md-0">
-            <p class="fs-5 mb-0">© Unify. 2021 Htmlstream.</p>
+            <p class="fs-5 mb-0">© InGeGomig 2023</p>
           </div>
 
           <div class="col-md d-md-flex justify-content-md-end">
             <!-- Socials -->
-            <ul class="list-inline mb-0">
-              <li class="list-inline-item">
-                <a
-                  class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle"
-                  href="#"
-                >
-                  <i class="bi-facebook"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a
-                  class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle"
-                  href="#"
-                >
-                  <i class="bi-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a
-                  class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle"
-                  href="#"
-                >
-                  <i class="bi-github"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a
-                  class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle"
-                  href="#"
-                >
-                  <i class="bi-slack"></i>
-                </a>
-              </li>
-            </ul>
+           
+                 <p class="fs-5 mb-0">Dreyka Santana</p>
+             
             <!-- End Socials -->
           </div>
         </div>

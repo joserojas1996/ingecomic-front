@@ -1,5 +1,6 @@
 <template>
   <div>
+    <v-overlay v-if="loading" />
     <!-- ========== HEADER ========== -->
     <header
       id="header"
@@ -9,7 +10,7 @@
             "fixEffect": "slide"
           }'
     >
-      <div class="container">
+      <div class="container" style="max-width: 1300px !important">
         <nav class="js-mega-menu navbar-nav-wrap">
           <!-- Default Logo -->
           <router-link class="navbar-brand" to="/" aria-label="Unify">
@@ -58,14 +59,19 @@
                     >Recursos</router-link
                   >
                 </li>
-                <li class="hs-has-mega-menu nav-item">
-                  <router-link class="hs-mega-menu-invoker nav-link" to="/about"
+                <li class="hs-has-mega-menu nav-item" v-if="userAuth?.id">
+                  <router-link class="hs-mega-menu-invoker nav-link" to="/test-list"
                     >Evaluaciones</router-link
                   >
                 </li>
-                <li class="hs-has-mega-menu nav-item">
+                <!-- <li class="hs-has-mega-menu nav-item" v-if="userAuth?.id">
                   <router-link class="hs-mega-menu-invoker nav-link" to="/about"
                     >Juegos</router-link
+                  >
+                </li> -->
+                 <li class="hs-has-mega-menu nav-item" v-if="userAuth?.id">
+                  <router-link class="hs-mega-menu-invoker nav-link" to="/administration"
+                    >Administracion</router-link
                   >
                 </li>
                 <!-- End Landings -->
@@ -81,7 +87,32 @@
                 <!-- End Log in -->
 
                 <!-- Sign up -->
-                <li class="nav-item">
+
+                <li class="nav-item dropdown" v-if="userAuth?.id">
+                  <a
+                    class="nav-link dropdown-toggle me-5"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img
+                      class="rounded"
+                      width="40"
+                      src="assets/img/160x160/img10.jpg"
+                      alt="Avatar"
+                    />
+                    <h5 class="mt-3 ms-2">
+                      {{ userAuth.name }}
+                    </h5>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Mi perfil</a></li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li style="cursor:pointer" class="dropdown-item" @click="SignOut()">Salir</li>
+                  </ul>
+                </li>
+                <li class="nav-item" v-else>
                   <router-link
                     class="btn btn-dark d-none d-lg-inline-block btn-pointer"
                     to="/login"
@@ -217,3 +248,37 @@
     <!-- ========== END SECONDARY CONTENTS ========== -->
   </div>
 </template>
+<script>
+import { computed, reactive, ref, defineComponent } from "vue";
+import { useStore } from "vuex";
+import { useRouter } from "vue-router";
+
+const Landing = defineComponent({
+  name: "Landing",
+  setup() {
+    const { state, dispatch } = useStore();
+    const loading = computed(() => state.auth.loading);
+    const userAuth = computed(() => state.auth.user?.data);
+    const { push } = useRouter();
+
+    const SignOut = async () => {
+      try {
+        const resp = await dispatch("logout");
+        if (resp.status == 204) {
+          push("/landing");
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    return {
+      loading,
+      userAuth,
+      SignOut,
+    };
+  },
+});
+
+export default Landing;
+</script>

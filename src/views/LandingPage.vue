@@ -1,4 +1,5 @@
 <template>
+  <div>
     <div class="container content-space-t-4 content-space-b-2 mt-5">
       <div class="row justify-content-lg-between align-items-lg-center">
         <div class="col-lg-6 mb-5 mb-lg-0">
@@ -19,7 +20,9 @@
           </div>
 
           <div class="d-grid d-sm-flex gap-3 mb-5">
-            <router-link class="btn btn-primary btn-pointer" to="/login"
+            <router-link
+              class="btn btn-primary btn-pointer"
+              :to="userAuth?.id ? '/about' : '/login'"
               >Quiero aprender mas</router-link
             >
           </div>
@@ -62,7 +65,7 @@
                 </div>
                 <div class="flex-grow-1 ms-2">
                   <div class="fs-5 fw-bold mb-0">Ana Marin</div>
-                  <span class="d-block fs-6">Necesito dinero!</span>
+                  <span class="d-block fs-6">Quiero invertir!</span>
                 </div>
               </div>
             </div>
@@ -85,7 +88,7 @@
                 </div>
                 <div class="flex-grow-1 ms-2">
                   <div class="fs-5 fw-bold text-dark mb-0">
-                    Sebastian Krauss
+                    Gabriel Di Santti
                   </div>
                   <span class="d-block fs-6 text-dark"
                     >Mi dinero no rinde 🔥👋</span
@@ -400,4 +403,26 @@
       <!-- End Row -->
     </div>
     <!-- End Card Grid -->
+  </div>
 </template>
+<script>
+import { computed, reactive, ref, defineComponent } from "vue";
+import { useStore } from "vuex";
+import { useRouter } from "vue-router";
+
+const LandingPage = defineComponent({
+  name: "LandingPage",
+  setup() {
+    const { state, dispatch } = useStore();
+    const loading = computed(() => state.auth.loading);
+    const userAuth = computed(() => state.auth.user?.data);
+
+    return {
+      loading,
+      userAuth,
+    };
+  },
+});
+
+export default LandingPage;
+</script>
